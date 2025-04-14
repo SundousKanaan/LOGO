@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Reviews from "./pages/Reviews/Reviews";
 import NoPage from "./pages/NoPage/NoPage";
+import Login from "./pages/Login/Login";
 
 import "./index.css";
 
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/Reviews",
     element: <Reviews />,
+  },
+  {
+    path: "/Login",
+    element: <Login />,
   },
   {
     path: "*",

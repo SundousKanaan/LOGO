@@ -45,3 +45,9 @@
 .pageContainer {
   padding: 40px 24px;
 }
+
+:focus-visible,
+:focus {
+  outline: none;
+  box-shadow: inset 0px 0px 0px 3px var(--theme-color);
+}
