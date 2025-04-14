@@ -1,0 +1,51 @@
+.navbar {
+  background-color: var(--white);
+  padding: 40px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 34px;
+}
+
+.navblock {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.logo {
+  font-family: var(--main-font);
+  font-weight: 900;
+}
+
+.navLinksList {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navLinksList li {
+  height: 50px;
+  position: relative;
+}
+
+.amont {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: var(--red);
+
+  position: absolute;
+  right: 5px;
+  top: calc(50% - 17px / 2);
+
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+}
