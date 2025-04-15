@@ -3,9 +3,8 @@ import * as ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
-import Login from "./pages/Login/Login";
-import "./index.css";
 import routes from "./routes";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
