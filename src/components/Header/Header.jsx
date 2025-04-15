@@ -1,4 +1,4 @@
-import routes from "../../data";
+import routes from "../../routes";
 import { useLocation } from "react-router-dom";
 import SearchBar from "../min-components/SearchBar/SearchBar";
 
@@ -14,7 +14,7 @@ export default function Header() {
   });
 
   return (
-    <header className="headerContainer">
+    <header className="header">
       <h2 className="pageTitle">{pageTitle}</h2>
 
       <span>

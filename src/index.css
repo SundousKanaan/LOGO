@@ -18,32 +18,42 @@
   margin: 0;
 }
 
-#root {
+body {
   background-color: var(--app-bg);
+}
 
+#root {
   display: grid;
   grid-template-columns: 220px 1fr;
-  grid-template-rows: 100vh;
+  grid-template-rows: 51px auto;
+  grid-template-areas:
+    "navbar header"
+    "navbar pageContainer";
+  gap: 24px;
+
+  padding-top: 40px;
+  padding-right: 24px;
 
   font-family: var(--secondary-font);
   font-weight: 400;
 }
 
-.navbar {
-  transform: none;
-  grid-area: 1 / 1 / 2 / 2;
-  width: 100%;
-  height: 100%;
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+}
+
+.headerContainer {
+  grid-area: header;
 }
 
 .pageContainer {
-  grid-area: 1 / 2 / 2 / 3;
+  grid-area: pageContainer;
   width: 100%;
   height: 100%;
-}
-
-.pageContainer {
-  padding: 40px 24px;
 }
 
 :focus-visible,

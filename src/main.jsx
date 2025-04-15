@@ -1,37 +1,27 @@
-import Navbar from "./components/Navbar/Navbar";
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import Reviews from "./pages/Reviews/Reviews";
-import NoPage from "./pages/NoPage/NoPage";
-import Login from "./pages/Login/Login";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import routes from "./routes";
+import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
 import "./index.css";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Dashboard />,
-  },
-  {
-    path: "/Reviews",
-    element: <Reviews />,
-  },
-  {
-    path: "/Login",
-    element: <Login />,
-  },
-  {
-    path: "*",
-    element: <NoPage />,
-  },
-]);
-
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <>
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
-  </>
+  <React.StrictMode>
+    <BrowserRouter>
+      <div className="navbarContainer">
+        <Navbar />
+      </div>
+      <div className="headerContainer">
+        <Header />
+      </div>
+      <section className="pageContainer">
+        <Routes>
+          {routes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.Element} />
+          ))}
+        </Routes>
+      </section>
+    </BrowserRouter>
+  </React.StrictMode>
 );
