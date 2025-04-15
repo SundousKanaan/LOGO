@@ -1,5 +1,5 @@
 import LinkButtom from "../min-components/LinkButtom/LinkButtom";
-import routes from "../../data";
+import routes from "../../routes";
 import "./Navbar.css";
 
 export default function Navbar() {

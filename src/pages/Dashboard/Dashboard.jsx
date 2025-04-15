@@ -1,12 +1,8 @@
-import Navbar from "../../components/Navbar/Navbar";
-import Header from "../../components/Header/Header";
-
 export default function Dashboard() {
   return (
     <>
-      <Navbar />
       <section className="pageContainer">
-        <Header />
+        <h2>Dashboard page is open</h2>
       </section>
     </>
   );
