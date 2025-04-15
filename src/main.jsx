@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import routes from "./routes";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
-
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -18,8 +17,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </div>
       <section className="pageContainer">
         <Routes>
-          {/* <Route index element={} /> */}
-          {/* <Route path="/Reviews" element={<Reviews />} /> */}
           {routes.map((route, index) => (
             <Route key={index} path={route.path} element={route.Element} />
           ))}
