@@ -18,18 +18,9 @@ export default function Navbar() {
                   path={route.path}
                   label={route.label}
                   icon={route.icon}
-                  hash={route.label}
                 />
               </li>
             ))}
-
-            {/* <li>
-              <LinkButtom
-                path="/Notifications"
-                label="Notifications"
-                icon="notification"
-              />
-            </li> */}
           </ul>
         </div>
         <button className="logOut">

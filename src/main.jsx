@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import routes from "./routes";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
+import routes from "./routes";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
