@@ -1,12 +1,12 @@
+import routes from "../../routes.jsx";
 import LinkButtom from "../min-components/LinkButtom/LinkButtom";
-import routes from "../../routes";
 import "./Navbar.css";
 
 export default function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className="navblock">
+        <div className="navbox">
           <h1 className="logo">LOGO</h1>
           <ul className="navLinksList">
             {routes.map((route, index) => (
