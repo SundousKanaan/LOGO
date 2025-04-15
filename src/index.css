@@ -25,32 +25,32 @@ body {
 #root {
   display: grid;
   grid-template-columns: 220px 1fr;
-  grid-template-rows: 51px auto;
+  grid-template-rows: 91px auto;
   grid-template-areas:
     "navbar header"
     "navbar pageContainer";
   gap: 24px;
-
-  padding-top: 40px;
-  padding-right: 24px;
-
   font-family: var(--secondary-font);
   font-weight: 400;
 }
 
 .navbarContainer {
+  width: 221px;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 221px;
+  padding: 40px 0;
 }
 
 .headerContainer {
   grid-area: header;
+  padding-top: 40px;
+  padding-right: 24px;
 }
 
 .pageContainer {
+  padding-right: 24px;
   grid-area: pageContainer;
   width: 100%;
   height: 100%;

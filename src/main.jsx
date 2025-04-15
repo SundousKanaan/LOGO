@@ -1,27 +1,19 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Header from "./components/Header/Header";
-import routes from "./routes";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./index.css";
+import App from "./app";
+import Login from "./pages/Login/Login";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="navbarContainer">
-        <Navbar />
-      </div>
-      <div className="headerContainer">
-        <Header />
-      </div>
-      <section className="pageContainer">
-        <Routes>
-          {routes.map((route, index) => (
-            <Route key={index} path={route.path} element={route.Element} />
-          ))}
-        </Routes>
-      </section>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/login" element={<Login />} />
+        {/* Redirect to app.jsx with open Dashboard if no match */}
+        <Route path="/*" element={<Navigate to="/" />} />{" "}
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
