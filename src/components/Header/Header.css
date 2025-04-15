@@ -1,6 +1,4 @@
-.headerContainer {
-  height: 51px;
-
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
