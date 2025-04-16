@@ -1,6 +1,6 @@
-import Reviews from "./pages/Reviews/Reviews";
-import NoPage from "./pages/NoPage/NoPage";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Reviews from "../pages/Reviews";
+import NoPage from "../pages/NoPage";
+import Dashboard from "../pages/Dashboard";
 
 const routes = [
   {
