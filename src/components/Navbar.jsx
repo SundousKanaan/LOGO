@@ -3,9 +3,16 @@ import routes from "../global/routes.jsx";
 import LinkButton from "../min-components/LinkButton.jsx";
 import { useLocation } from "react-router-dom";
 import ButtonItem from "../min-components/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const location = useLocation().pathname;
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate("/login", { replace: true });
+  };
 
   return (
     <>
@@ -104,11 +111,8 @@ export default function Navbar() {
           variant="ghost"
           width="100%"
           gap="12px"
-          justifyContent="start"
+          onClick={handleLogout}
           _hover={{ bg: "lightGray" }}
-          onClick={() => {
-            console.log("log out clicked");
-          }}
         >
           <Image
             borderRadius="full"
