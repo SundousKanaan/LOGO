@@ -49,7 +49,7 @@ export default function Header() {
             justifyItems="center"
             alignItems="start"
           >
-            <HeadingItem fontSize="18px" lineHeight="24px" fontWeight="600">
+            <HeadingItem fontSize="18px" lineHeight="24px" fontWeight="500">
               John Smith
             </HeadingItem>
             <Text
