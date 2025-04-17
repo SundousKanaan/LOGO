@@ -10,6 +10,8 @@ const theme = extendTheme({
     themeColor: "#6f6cf3",
     secondaryColor: "#161819",
     lightGray: "#f6f6f8",
+    lightGray2: "#f1f1f1",
+    lightBlue: "#F4F6F7",
     infoNotic: "#ff4a4a",
     risingColor: "#42AA65",
     lightrRisingColor: "#EBFDEF",

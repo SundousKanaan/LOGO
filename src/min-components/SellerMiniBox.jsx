@@ -18,7 +18,7 @@ export default function SellerMiniBox({ name, company, listing, img }) {
     <Flex align="center">
       <HStack align="center">
         <Image
-          src={`/src/assets/icons/${img}.svg`}
+          src={`/src/assets/${img}.svg`}
           alt="seller"
           boxSize="36px"
           objectFit="cover"

@@ -10,6 +10,7 @@ import {
 import CountingBox from "../components/CountingBox";
 import ButtonItem from "../min-components/Button";
 import TopSellers from "../components/TopSellers";
+import TopAdmin from "../components/TopAdmin";
 
 export default function Dashboard() {
   return (
@@ -91,7 +92,16 @@ export default function Dashboard() {
         </GridItem>
 
         <GridItem gridArea="r3c1"></GridItem>
-        <GridItem gridArea="r3c3"></GridItem>
+        <GridItem gridArea="r3c3">
+          {/* // TODO: make the data dynamic */}
+          <TopAdmin
+            name="Carl Meadows"
+            role="Admin"
+            noticesReviewed="12,123"
+            img="/src/assets/topAdmin.jpg"
+            path="/TopSellers"
+          />
+        </GridItem>
       </Grid>
     </>
   );
