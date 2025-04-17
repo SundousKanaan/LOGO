@@ -20,7 +20,7 @@ export default function Dashboard() {
     <>
       <Flex
         width="calc(100% - 24px)"
-        height="40px"
+        height="45px"
         alignItems="center"
         marginBottom="20px"
       >

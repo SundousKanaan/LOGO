@@ -3,8 +3,12 @@ import { useLocation } from "react-router-dom";
 import SearchBar from "../min-components/SearchBar";
 import { Flex, Image, Text, Spacer, HStack, VStack } from "@chakra-ui/react";
 import HeadingItem from "../min-components/HeadingItem";
+import LinkButton from "../min-components/LinkButton";
 
 export default function Header() {
+  const userName = "John Smith"; // !TODO: change to dynamic value
+  const imgSrc = "/src/assets/user.jpg"; // !TODO: change to dynamic value
+  const role = "Admin"; // !TODO: change to dynamic value
   const location = useLocation();
   let pageTitle = "";
   routes.filter((route) => {
@@ -27,27 +31,29 @@ export default function Header() {
 
       <SearchBar />
 
+      {/* !TODO: change to dynamic values: img.src & texts */}
       <HStack>
-        {/* !TODO: change to dynamic values: img.src & texts */}
         <Image
           borderRadius="full"
           boxSize="40px"
           objectFit="cover"
-          src="/src/assets/user.jpg"
-          alt="user photo"
+          src={imgSrc}
+          alt={`${userName} profile photo`}
         />
 
         <VStack width="153px" align="start" spacing="0">
-          <HeadingItem fontSize="18px" lineHeight="24px" fontWeight="500">
-            John Smith
-          </HeadingItem>
+          <LinkButton height="fit-content" variant="text" to={`/${userName}`}>
+            <HeadingItem fontSize="18px" lineHeight="24px" fontWeight="500">
+              {userName}
+            </HeadingItem>
+          </LinkButton>
           <Text
             fontSize="14px"
             fontWeight="400"
             opacity="0.5"
             color="secondaryColor"
           >
-            Admin
+            {role}
           </Text>
         </VStack>
       </HStack>
