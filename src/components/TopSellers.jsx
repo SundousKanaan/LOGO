@@ -59,9 +59,8 @@ export default function TopSellers() {
 
       <List spacing="18px" mt="16px">
         {fakeSellers.map((seller, index) => (
-          <ListItem>
+          <ListItem key={index}>
             <SellerMiniBox
-              key={index}
               name={seller.name}
               company={seller.company}
               listing={seller.listing}

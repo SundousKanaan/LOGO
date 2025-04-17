@@ -1,5 +1,6 @@
 import { Box, Stack, Image, Text, HStack } from "@chakra-ui/react";
 import HeadingItem from "../min-components/HeadingItem";
+import ChartLine from "../min-components/ChartLine";
 
 export default function CountingBox({
   title,
@@ -7,11 +8,12 @@ export default function CountingBox({
   changeRatio,
   icon,
   date,
+  chart,
   ...props
 }) {
   // TODO:  add the chart line
   return (
-    <Box layerStyle="dashboardCardsLayaout" {...props}>
+    <Box layerStyle="dashboardCardsLayaout" {...props} position="relative">
       <Stack
         opacity="60%"
         width="100%"
@@ -89,6 +91,18 @@ export default function CountingBox({
       >
         {date}
       </Text>
+
+      {chart && (
+        <Box
+          width="155px"
+          height="88px"
+          position="absolute"
+          top="47px"
+          right="24px"
+        >
+          <ChartLine />
+        </Box>
+      )}
     </Box>
   );
 }

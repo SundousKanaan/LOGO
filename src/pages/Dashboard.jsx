@@ -13,6 +13,7 @@ import ButtonItem from "../min-components/Button";
 import TopSellers from "../components/TopSellers";
 import TopAdmin from "../components/TopAdmin";
 import NotifOfTakeDownds from "../components/NotifOfTakeDownds";
+import Analytics from "../components/Analytics";
 
 export default function Dashboard() {
   return (
@@ -91,9 +92,12 @@ export default function Dashboard() {
             counting="2395"
             icon="message-notif"
             date="October 2023"
+            chart={true}
           />
         </GridItem>
-        <GridItem gridArea="r2c2"></GridItem>
+        <GridItem gridArea="r2c2">
+          <Analytics />
+        </GridItem>
         <GridItem gridArea="r2c3">
           <TopSellers />
         </GridItem>
