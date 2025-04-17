@@ -1,4 +1,4 @@
-import { Flex, HStack, Spacer } from "@chakra-ui/react";
+import { Flex, HStack, VStack, Spacer } from "@chakra-ui/react";
 import HeadingItem from "../min-components/HeadingItem";
 import LinkButton from "../min-components/LinkButton";
 import TakeDownsNotif from "../min-components/TakeDownsNotif";
@@ -67,9 +67,9 @@ export default function NotifOfTakeDownds() {
       time: "6 mins ago",
     },
     {
-      title: "4 PCS Herb Tobacco Spice Grinder, COMBAT",
-      link: "https://yourproducturlgoeshere1122.com",
-      time: "6 mins ago",
+      title: "4 PCS Herb Tobacco Spice Grinder",
+      link: "https://yourproducturlgoeshere1lkllk,slaklsal122.com",
+      time: "8 hours ago",
     },
   ];
   return (
@@ -93,14 +93,16 @@ export default function NotifOfTakeDownds() {
           View All
         </LinkButton>
       </HStack>
-      {notifications.map((notification, index) => (
-        <TakeDownsNotif
-          key={index}
-          title={notification.title}
-          link={notification.link}
-          time={notification.time}
-        />
-      ))}
+      <VStack spacing="28px" align="start">
+        {notifications.map((notification, index) => (
+          <TakeDownsNotif
+            key={index}
+            title={notification.title}
+            link={notification.link}
+            time={notification.time}
+          />
+        ))}
+      </VStack>
     </Flex>
   );
 }
