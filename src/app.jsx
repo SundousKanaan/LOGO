@@ -17,6 +17,8 @@ export default function App() {
           `}
       gap="24px"
       bg="lightGray"
+      h="100vh"
+      overflow="hidden"
     >
       <GridItem gridArea="navbar" bg="white">
         <Navbar />
@@ -24,7 +26,7 @@ export default function App() {
       <GridItem gridArea="header" paddingRight="24px">
         <Header />
       </GridItem>
-      <GridItem gridArea="page">
+      <GridItem gridArea="page" overflowY="auto" paddingBottom="20px">
         <Routes>
           {routes.map((route, i) => (
             <Route

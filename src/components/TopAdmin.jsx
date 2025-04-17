@@ -1,5 +1,4 @@
 import {
-  Box,
   HStack,
   Image,
   Spacer,
@@ -9,7 +8,6 @@ import {
   Center,
 } from "@chakra-ui/react";
 import HeadingItem from "../min-components/HeadingItem";
-import ButtonItem from "../min-components/Button";
 import LinkButton from "../min-components/LinkButton";
 
 export default function TopAdmin({ name, role, noticesReviewed, img, path }) {
@@ -21,12 +19,7 @@ export default function TopAdmin({ name, role, noticesReviewed, img, path }) {
       h="236px"
     >
       <HStack>
-        <HeadingItem
-          fontWeight="500"
-          fontSize="18px"
-          color="secondaryColor"
-          width="fit-content"
-        >
+        <HeadingItem fontWeight="500" fontSize="18px" color="secondaryColor">
           Top Admin
         </HeadingItem>
         <Spacer />

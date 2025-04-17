@@ -1,4 +1,5 @@
 import {
+  Box,
   ButtonGroup,
   Flex,
   Grid,
@@ -11,11 +12,17 @@ import CountingBox from "../components/CountingBox";
 import ButtonItem from "../min-components/Button";
 import TopSellers from "../components/TopSellers";
 import TopAdmin from "../components/TopAdmin";
+import NotifOfTakeDownds from "../components/NotifOfTakeDownds";
 
 export default function Dashboard() {
   return (
     <>
-      <Flex width="calc(100% - 24px)" height="40px" alignItems="center">
+      <Flex
+        width="calc(100% - 24px)"
+        height="40px"
+        alignItems="center"
+        marginBottom="20px"
+      >
         <Text fontWeight="500" fontSize="18px" color="secondaryColor">
           Wed, Oct 27
         </Text>
@@ -91,9 +98,12 @@ export default function Dashboard() {
           <TopSellers />
         </GridItem>
 
-        <GridItem gridArea="r3c1"></GridItem>
+        <GridItem gridArea="r3c1">
+          <NotifOfTakeDownds />
+        </GridItem>
         <GridItem gridArea="r3c3">
           {/* // TODO: make the data dynamic */}
+
           <TopAdmin
             name="Carl Meadows"
             role="Admin"
